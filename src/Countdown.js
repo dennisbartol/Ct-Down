@@ -12,3 +12,17 @@ class Countdown extends Component {
       sec: 0,
     };
   }
+
+   componentDidMount() {
+      this.interval = setInterval(() => {
+      const date = this.calculateCountdown(this.props.date);
+      date ? this.setState(date) : this.stop();
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    this.stop();
+  }
+
+  calculateCountdown(endDate) {
+    let diff = (Date.parse(new Date(endDate)) - Date.parse(new Date())) / 1000;
