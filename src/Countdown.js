@@ -26,3 +26,21 @@ class Countdown extends Component {
 
   calculateCountdown(endDate) {
     let diff = (Date.parse(new Date(endDate)) - Date.parse(new Date())) / 1000;
+
+
+  if (diff <= 0) return false;
+
+    
+    const timeLeft = {
+      years: 0,
+      days: 0,
+      hours: 0,
+      min: 0,
+      sec: 0,
+    };
+
+    if (diff >= 365.25 * 86400) {
+      // 365.25 * 24 * 60 * 60
+      timeLeft.years = Math.floor(diff / (365.25 * 86400));
+      diff -= timeLeft.years * 365.25 * 86400;
+    }
