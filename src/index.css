@@ -1,1 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  text-align: center;
+  height: 100vh;
+  /* background: linear-gradient(to right bottom, #008793, #004d7a, #051937); */
+  background: linear-gradient(to right bottom, red, darkred); 
+}
 
+.App-logo {
+  height: 150px;
+}
+
+.App-header {
+  background-color: #010101;
+  padding: 20px;
+  color: goldenrod;   /* ghostwhite; */
+}
+
+.App-header .title{
+  margin-top: 40px;
+}
+
+h3 { 
+  color: ghostwhite;
+  opacity: 0.7;
+}
+
+.Countdown{
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #010101;
+  color: ghostwhite;
+}
+
+.Countdown-col{
+  display: inline-block;
+}
+
+.Countdown-col-element{
+  display: inline-block;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Countdown-col-element strong{
+  font-size: 3.75rem;
+}
