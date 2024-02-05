@@ -63,3 +63,22 @@ class Countdown extends Component {
 
     return timeLeft;
   }
+
+
+  stop() {
+    clearInterval(this.interval);
+  }
+
+  addLeadingZeros(value) {
+    value = String(value);
+    while (value.length < 2) {
+      value = "0" + value;
+    }
+    return value;
+  }
+
+  render() {
+    const countDown = this.state;
+
+
+  
